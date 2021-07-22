@@ -1,13 +1,13 @@
 # K8s-POC
 ## Stateful sets with Headless Service
  ### Stateful sets gurantees following:
- Predictable and persistent Pod names
- Predictable and persistent DNS hostnames
- Predictable and persistent volume bindings
- Volumes are decoupled from Pods
- Easy scale in/scale out
+ #### Predictable and persistent Pod names
+ #### Predictable and persistent DNS hostnames
+ #### Predictable and persistent volume bindings
+ #### Volumes are decoupled from Pods
+ #### Easy scale in/scale out
  
- Headless service is a service with clusterIP node
+ ### Headless service is a service with clusterIP node
  
  Stateful sets and headless service together create DNS records for pods matching labels selector service name
  Kubernetes constructs DNS subdomains as below
