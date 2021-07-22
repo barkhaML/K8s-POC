@@ -41,4 +41,12 @@
   Lets try to communicate between pods, beow command will load a doc in to ML BD running on pod 2:
   
   curl --anyauth -u admin:admin -H "Content-Type: application/xml" -X PUT -d '<rainbow/>' -v "http://mldb-pod-1-1.mldb-service-1.default.svc.cluster.local:8002/v1/documents?uri=/docs/person.xml"
+  
+  Scaling stateful sets:
+  kubectl scale statefulset mldb-pod-2 --replicas=4
+  
+  Its always best to scale down the stateful set before deleting
+  Volumes will persist even if pods scale down to preserve data.
+  
+  
  
